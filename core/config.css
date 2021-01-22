@@ -1,0 +1,238 @@
+body {
+    color: #333;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 8em;
+    background-color: #FCFCFC;
+}
+
+h1 {
+    color: #000;
+    margin: 0px;
+    font-size: 2em;
+    font-weight: bolder;    
+    padding: 0.4em 1em;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-shadow: 0.1em 0.1em rgba(0, 0, 0, 0.2);
+}
+
+label {
+    padding: 0.8em;
+    margin: 1em 0em;
+    display: block;
+    font-weight: bold;
+}
+
+.container {
+    width: 50%;
+    border-radius: 6px;
+    margin: 0em auto;
+    padding: 1em 2em;
+    transition-property: width;
+    transition-duration: 0.25s;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 10px 4px rgba(50, 50, 50, 0.05);
+    -moz-box-shadow: 0px 0px 10px 4px rgba(50, 50, 50, 0.05);
+    box-shadow: 0px 0px 10px 4px rgba(50, 50, 50, 0.05);
+}
+
+.section-voices input {
+    position: absolute;
+    margin-top: -4.4em;
+    padding: 0.8em;
+    width: 38%;
+    margin-left: 10%;
+    text-align: right;
+    border: 0px;
+    outline: none;
+    background:transparent;
+    transition-property: border;
+    transition-duration: 1s;
+    border-bottom: 1px dashed transparent;
+}
+.section-voices input:focus {
+    border-bottom: 1px dashed #AAA;
+}
+
+/* options */
+
+.container-options {
+    padding: 0.4em 2em;
+}
+
+.list {
+    padding: 0px;
+    margin-bottom: 1em;
+}
+
+.list .item {
+    border: 0;
+    display: block;
+    cursor: pointer;
+    padding: 0.8em 1em;
+    border-radius: 3px;
+    border-radius: 0.3em;
+}
+
+.list .item:hover,
+.list .item[data-selected="true"] {
+    color: #000;
+    background-color: #fcfcfc;
+}
+
+.list .item[data-selected="true"] {
+    color: #fff;
+    background: #1d1133;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+    border-color: #000;
+    background-color: #000;
+}
+
+.list-voices .item-hide {
+    display: none;
+}
+
+.list-rates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    grid-auto-flow: column;
+}
+
+.list-rates .item {
+    text-align: center;
+}
+
+.list:empty:after {
+    content: "Loading...";
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 80%;
+    color: #ccc;
+}
+
+/* actions */
+
+footer {
+    position: fixed;
+    left: 0em;
+    right: 0em;
+    bottom: 0em;
+}
+
+footer .container-actions {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 1em;
+    border: 1px solid #f4f4f4;
+    background-color: #fcfcfc;
+}
+
+footer .container-actions .textarea {
+    width: 50%;
+    min-height: 3em;
+    overflow: hidden;
+}
+
+footer .container-actions .textarea textarea {
+    padding: 0em;
+    margin: 0em;
+    border: 0px;
+    resize: none;
+    width: 98%;
+    min-height: 4em;
+    overflow: hidden;
+    background-color: transparent;
+    outline: none;
+    line-height: 1em;
+}
+
+footer .container-actions .btn {
+    width: 24%;
+    border-radius: 0.3em;
+    min-height: 3em;
+    overflow: hidden;
+    border: 0px;
+    font-size: 1em;
+    cursor: pointer;
+    outline: none;
+    font-weight: 300;
+}
+
+footer .container-actions .btn-test {
+    color: #333;
+    background-color: #f3f3f3;
+}
+
+footer .container-actions .btn-test:hover,
+footer .container-actions .btn-test:focus {
+    background-color: #f0f0f0;
+}
+
+footer .container-actions .btn-save {
+    color: #fff;
+    border-color: #333;
+    background-color: #333;
+}
+
+footer .container-actions .btn-save:hover,
+footer .container-actions .btn-save:focus {
+    border-color: #000;
+    background-color: #000;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 60%;
+    }
+    .section-voices input {
+        width: 48%;
+    }
+}
+
+@media (max-width: 1060px) {
+    .container {
+        width: 70%;
+    }
+    .section-voices input {
+        width: 58%;
+    }
+}
+
+@media (max-width: 985px) {
+    .container {
+        width: 80%;
+    }
+    .section-voices input {
+        width: 68%;
+    }
+}
+
+@media (max-width: 860px) {
+    body {
+        padding-bottom: 16em;
+    }
+    .container {
+        width: 86%;
+    }
+    .section-voices input {
+        width: 64%;
+        margin-left: 18%;
+    }
+    footer .container-actions {
+        flex-flow: column wrap;
+    }
+    footer .container-actions .textarea {
+        width: 100%;
+    }
+    footer .container-actions .btn {
+        width: 100%;
+        margin-top: 1em;
+    }
+}

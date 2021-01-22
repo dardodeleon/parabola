@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Parábola - Options</title>
+    <link rel="stylesheet" href="config.css" />
+</head>
+
+<body id="app">
+
+    <h1 title="Parábola">~</h1>
+    <article class="container container-options">
+
+        <section class="section-rate">
+            <label>Rate</label>
+            <ul id="rates" class="list list-rates"></ul>
+        </section>
+
+        <section class="section-voices">
+            <label>Voices</label>
+            <input type="text" id="filter" data-key="filter" placeholder="Find voice" />
+            <ul id="voices" class="list list-voices"></ul>
+        </section>
+
+    </article>
+    <footer>
+        <section class="container container-actions">
+            <div class="textarea">
+                <textarea id="text">En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor.</textarea>
+            </div>
+            <button type="button" class="btn btn-test" id="test" data-action="test">Test</button>
+            <button type="button" class="btn btn-save" id="save" data-action="save">Save</button>
+        </section>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="../browser.js"></script>
+    <script src="config.js"></script>
+</body>
+
+</html>
